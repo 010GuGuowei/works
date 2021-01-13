@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./vue.js"></script>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-for="(item,index) in arr" :key="item.id">
+            <h1>{{item}}</h1>
+        </div>
+        <button @click="aaa">aaa</button>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                arr: [
+                    {
+                        id: 1,
+                        fruit: "苹果",
+                    },
+                    {
+                        id: 2,
+                        fruit: "香蕉",
+                    },
+                    {
+                        id: 3,
+                        fruit: "橙子",
+                    },
+                ],
+            },
+            methods: {
+                aaa() {
+                    //这一步是常规方法  先试试这个   大多数程序员想到的
+                    // this.$set(this.arr,1,)
+
+
+                    // vue 提供的一个解决API   Vue.$set(target,key,value)
+                    // target => 需要改变的数组
+                    // key => 索引
+                    // value => 更改后的值
+
+
+                    // 如果是对象
+                    this.$set(this.arr[1], '香蕉', '是黄色的');
+                    
+                    console.log(this.arr);
+                },
+            },
+        });
+      // console.log(app);
+    </script>
+</body>
+
+</html>

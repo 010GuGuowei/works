@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Users</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+	<!--必要样式-->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+	<script type="text/javascript" src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
+</head>
+
+<body>
+	<div class="container" id="app">
+
+		<header>
+			<nav class="codrops-demos">
+				<a class="current-demo" title="Basic Usage" @click="d">Get Users</a>
+
+
+				<!-- <a href="index2.html" title="Biaxial Headers">Biaxial Headers</a> -->
+				<!-- <a href="index3.html" title="Wide Tables">Wide Tables</a> -->
+			</nav>
+		</header>
+
+		<div class="component" >
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Password</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="item in data">
+						<td class="user-name" >{{item._id}}</td>
+						<td class="user-email" >{{item.username}}</td>
+						<td class="user-mobile" >{{item.pass}}</td>
+
+					</tr>
+				
+					
+				<!-- 	<tr>
+						<td class="user-name">{{val}}</td>
+						<td class="user-email">gary.coleman21@example.com</td>
+						<td class="user-phone">(398)-332-5385</td>
+						< <td class="user-mobile">(888)-677-3719</td>
+					</tr> -->
+				</tbody>
+			</table>
+		</div>
+
+	</div><!-- /container -->
+
+
+
+</body>
+
+</html>
+<script src="../vue.js"></script>
+<script>
+
+	let app = new Vue({
+		el: '#app',
+		data: {
+			val: 'test',
+			data:'',
+		},
+		methods: {
+			submit() {
+				console.log('我来到了submit里面')
+			},
+
+			d() {
+				console.log('进入d里面了')
+				axios({
+				url: 'http://localhost:5001/vuestudy/',
+				method: 'get',
+
+			}).then(response => {
+				console.log(response)
+				// console.log(response.data[0].username)
+				// this.username = response.data[0].username
+				// 解构赋值拿出data
+				this.data= response.data;
+				console.log(this.data);
+				console.log(typeOf(this.data))
+			}).catch(error => {
+				console.log(error)
+			})
+			// console.log(this.fruits)
+			
+			},
+		},
+		created() {
+			// axios    111111
+		
+		},
+	})
+
+
+</script>

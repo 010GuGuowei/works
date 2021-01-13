@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <div id="app">
+            <h1>{{msg}}</h1>
+
+            <button @click="bbb">我要更新数据</button>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+
+    let app = new Vue({
+        el: '#app',
+        // 以下的都是数据
+        data: {
+            msg: 100,
+            fruits: ['apple', 'pear', 'banana', 'orange'],
+        },
+        // 以下的的都是函数方法
+        methods: {
+            aaa: function (){
+                console.log('进入aaa里面了');
+            },
+            bbb: function (){
+                this.msg++;
+            }
+        },
+        // 这是生命周期函数 beforeCreate
+        // 创建之前 new 操作部署能力的过程中,但还没有部署完成
+        // 现在还获取不到 el,data,methods 中的东西
+        beforeCreate: function (){      // beforeCreate(){}
+            console.log('现在进入breforeCreate');
+            // console.log(this.fruits);   // 获取不到 => undefined
+        },
+        // 这是生命周期函数 created
+        // 这个阶段 new 操作已经部署完成
+        created: function () {      // 简写 created(){}
+            console.log('进入created里面了');
+            console.log(this.fruits);   // 可以获取到了
+            this.aaa();
+        },
+        // 这是生命周期函数 beforeMount
+        // 虽然 created 已经部署完成 但是还没经过算法和 DOM 元素的比对和插入
+        // 就像快递员已经拿到快递准备派件了
+        // beforeMount 和created 中间有算法,已经找到 DOM 节点,数据渲染之前的已经准备好了,就差渲染进页面了
+        // 这一步可以最后再检查数据是否正确,不对可以立马改变
+        // 就像快递员已经找到你你可以核对是不是你的快的,准备签收了
+        beforeMount:function(){     // 简写 before(){}
+            console.log('进入beforeMount里面了');
+            console.log(this.fruits);
+            this.aaa();
+        },
+        // 这是生命周期函数 mounted
+        // 数据(data,methods)都已经拿到了也渲染到页面中了
+        // 快递已经签收了
+        mounted: function (){
+            console.log('进入mounted里面了')
+        },
+        // 这是生命周期函数 brforeUpdate
+        // 数据更新前  
+        // 数据双向绑定,更新数据时会进入这里
+        beforeUpdate: function (){
+            console.log('现在进入beforeUpdate里面了');
+
+        },
+        // 这是生命周期函数 updated
+        updated:function (){
+            console.log('现在进入到updated里面了');
+
+        },
+        // 这是生命周期函数 beforeDestory
+        // 页面销毁之前
+        beforeDestory: function() {
+            console.log('现在进入到beforeDestory里面了')
+        },
+        // 页面销毁之后
+        destoryed: function() {
+            console.log('现在进入到destoryed里面了')
+        }
+
+
+    })
+
+</script>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- 
+    顾国威
+    2021.01.13
+ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+        .active { 
+            color:red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div id="app">
+            <h4>{{msg}}</h4>
+
+            <button @click="bbb">我要更新数据</button>
+
+            <h4>v-pre 指令</h4>
+            <p>填充原本信息,跳过表达式原始信息</p>
+            <p v-pre> {{massage}} </p>
+
+            <h4>v-once 指令</h4>
+            <p>只渲染元素和组件一次，之后元素和组件将失去响应式（数据层面）功能</p>
+            <p v-once>{{massage}}</p>
+
+            <h4>v-cloak</h4>
+            <p>
+                作用：解决浏览器在加载页面时因存在时间差而产生的闪动问题<br>
+                原理：先隐藏元素挂载位置，处理好渲染后再显示最终的结果<br>
+                注意：需要与CSS规则一起使用
+            </p>
+            <p v-cloak>{{massage}}</p>
+
+            <h4>按键修饰符</h4>
+            <!-- 当input框获取焦点时按下 enter 键触发 -->
+            <input @keyup.enter='submit' type="text" placeholder="按下enter键触发"> <span>{{inputV}}</span>
+            <h4>v-if 分支指令</h4>
+            <p>根据表达式的布尔值(true/false)进行判断是否渲染该元素</p>
+            <input type="text" :value="score" @input="score=$event.target.value" placeholder="请输入成绩">
+            <!-- <span>通过v-if 判断出来的-----</span> -->
+            <span v-if="score >= 90">优秀</span>
+            <span v-if="score < 90 && score >=80 ">良好</span>
+            <span v-if="score < 80 && score >= 60">中等</span>
+            <span v-if="score < 60">不及格</span>
+
+
+            <h4>样式绑定</h4>
+            <div :class="{active:msg}">
+                class样式绑定
+            </div>
+
+
+            <h4>v-model</h4>
+            <input v-model="modelV" type="text" placeholder="输入内容"><span>{{modelV}}</span>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="./vue.js"></script>
+<script>
+
+    let app = new Vue({
+        el: '#app',
+        // 以下的都是数据
+        data: {
+            msg: 100,
+            inputV: '',
+            massage: '我是massage',
+            fruits: ['apple', 'pear', 'banana', 'orange'],
+            score:99,
+            modelV: '',
+        },
+        // 以下的的都是函数方法
+        methods: {
+            aaa: function () {
+                console.log('进入aaa里面了');
+            },
+            bbb: function () {
+                this.msg++;
+            },
+            submit(value) {
+                this.inputV = '我被触发了';
+            },
+
+        },
+        // 这是生命周期函数 beforeCreate
+        // 创建之前 new 操作部署能力的过程中,但还没有部署完成
+        // 现在还获取不到 el,data,methods 中的东西
+        beforeCreate: function () {      // beforeCreate(){}
+            console.log('现在进入breforeCreate');
+            // console.log(this.fruits);   // 获取不到 => undefined
+        },
+        // 这是生命周期函数 created
+        // 这个阶段 new 操作已经部署完成
+        created: function () {      // 简写 created(){}
+            console.log('进入created里面了');
+            console.log(this.fruits);   // 可以获取到了
+            this.aaa();
+        },
+        // 这是生命周期函数 beforeMount
+        // 虽然 created 已经部署完成 但是还没经过算法和 DOM 元素的比对和插入
+        // 就像快递员已经拿到快递准备派件了
+        // beforeMount 和created 中间有算法,已经找到 DOM 节点,数据渲染之前的已经准备好了,就差渲染进页面了
+        // 这一步可以最后再检查数据是否正确,不对可以立马改变
+        // 就像快递员已经找到你你可以核对是不是你的快的,准备签收了
+        beforeMount: function () {     // 简写 before(){}
+            console.log('进入beforeMount里面了');
+            console.log(this.fruits);
+            this.aaa();
+        },
+        // 这是生命周期函数 mounted
+        // 数据(data,methods)都已经拿到了也渲染到页面中了
+        // 快递已经签收了
+        mounted: function () {
+            console.log('进入mounted里面了')
+        },
+        // 这是生命周期函数 brforeUpdate
+        // 数据更新前  
+        // 数据双向绑定,更新数据时会进入这里
+        beforeUpdate: function () {
+            console.log('现在进入beforeUpdate里面了');
+
+        },
+        // 这是生命周期函数 updated
+        updated: function () {
+            console.log('现在进入到updated里面了');
+
+        },
+        // 这是生命周期函数 beforeDestory
+        // 页面销毁之前
+        beforeDestory: function () {
+            console.log('现在进入到beforeDestory里面了')
+        },
+        // 页面销毁之后
+        destoryed: function () {
+            console.log('现在进入到destoryed里面了')
+        }
+
+
+    })
+
+</script>
