@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css/cart.css">
+
+</head>
+
+<body>
+
+    <!-- 页面头部 -->
+    <div class="header">
+        <div class="header-center"></div>
+    </div>
+
+    <!-- 页面内容区域 -->
+    <div id="app">
+        <!-- 商品列表区域 -->
+
+        <div class="mzContainer">
+            <div class="check-container">
+
+                <!-- 商品列表头部 -->
+                <div class="shop-cart-nav">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="check-area"><a href="javascript:;" class="check-label check-all"><em
+                                            class="check-name">商品</em></a></td>
+                                <td class="singal-price"> 单价(元) </td>
+                                <td class="volumes"> 数量 </td>
+                                <td class="small-total"> 小计(元) </td>
+                                <td class="edit-area"><span class="edit"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 单条商品 -->
+                <table class="goods-body">
+                    <tbody>
+                        <tr v-for="(item,index) in cartData">
+                            <td class="goods-col-select">
+                                <a href="javascript:;" class="check-label check-product">
+                                    <input type="checkbox" :value="item.id" v-model="checkArr">
+                                </a>
+                                <a href="javascript:;" class="goods-img">
+                                    <img :src="item.url" alt=""> </a>
+                                <a href="javascript:;" class="goods-info">
+                                    <h4 class="goods-info-title">{{item.name}}</h4>
+                                </a>
+                            </td>
+                            <td class="goods-col-price"> <span>￥{{item.price}}</span> </td>
+                            <td class="goods-col-volumes">
+                                <div class="num-ctrl-area clearfix">
+                                    <button class="minus" @click="dec(item,index)">-</button>
+                                    <input type="text" v-model="item.num" class="input">
+                                    <button class="plus" @click="inc(item)">+</button>
+                                </div>
+                            </td>
+                            <td class="goods-col-total"> <span>{{item.price * item.num}}</span> </td>
+                            <td class="goods-col-ctrl">
+                                <i class="del-product">
+                                    <span class="line-left"></span>
+                                    <span class="line-right"></span>
+                                </i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="shop-cart-footer fixed">
+            <div class="cart-foot clearfix">
+                <div class="cart-foot-left">
+                    <div href="javascript:;" class="check-label check-all">
+                        <input type="checkbox" v-model="checked" @change="checkAll">
+                        <em class="check-name">全选</em>
+                        <button @click="antiselect" class="fanxuan">反选</button>
+                        <button @click="deleteAll" class="fanxuan">删除全部</button>
+                    </div>
+                </div>
+
+                <div class="cart-foot-right">
+                    <em class="total-bill"> 合计(不含运费)：
+                        <span class="bill-price">￥{{total}}</span>
+                    </em>
+                    <a href="javascript:;" class="order-btn ban-order">去结算</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="./vue.js"></script>
+<script>
+
+
+
+    var cartData = [
+        { id: 1, url: './image/1.jpg', name: '苹果', price: 20, num: 1 },
+        { id: 2, url: './image/2.jpg', name: '西瓜', price: 30, num: 1 },
+        { id: 3, url: './image/3.jpg', name: '香蕉', price: 40, num: 1 },
+        { id: 4, url: './image/4.jpg', name: '荔枝', price: 50, num: 1 }
+    ]
+
+
+    let app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                // 商品列表
+                cartData,
+                // 全选的状态
+                checked: false,
+                // 单选的状态
+                checkArr: []
+            };
+        },
+        //方法 函数写这里
+        methods: {
+            // 全选的方法
+            checkAll() {
+                // console.log('全选');
+
+                if (this.checked) {
+                    console.log('我被选中了');
+                    this.cartData.forEach(element => {
+                        // console.log(element);
+                        // 在 checkArr 里面寻找 element.id 如果有则返回它对应的下标 如果没有则返回 -1
+                        // 保存到 pos
+                        let pos = this.checkArr.indexOf(element.id)
+                        // console.log(pos);
+                        // console.log('checkArr',this.checkArr)
+                        if (pos == -1) {
+                            // 如果没有找到当前商品的 id 则在checkArr 里面添加
+                            this.checkArr.push(element.id)
+                        }
+                    });
+
+                } else {
+                    console.log('我被取消选中了')
+                    this.checkArr = [];
+                }
+
+            },
+            // 商品数量增加的方法
+            inc(item) {
+                console.log('商品数量++', item.num)
+                item.num++;
+
+            },
+            // 商品数量减少的方法
+            dec(item, index) {
+                console.log('商品数量---', item.num);
+                // 判断是否为最后一件
+                if (item.num == 1) {
+                    // 使用数组的方法根据删除其中索引为 index 的一条
+                    confirm('机不可失，确定不要买一件吗？') && this.cartData.splice(index, 1);
+                } else {
+                    item.num--;
+                }
+            },
+            // 反选的方法
+            antiselect() {
+                console.log('我是反选的方法');
+                this.cartData.forEach(element => {
+                    let pos = this.checkArr.indexOf(element.id)
+                    // 只要被选中下标就不会为 <0 既 >-1
+                    if (pos > -1) {
+                        // 大于 -1 就在 checkArr 里面删除这一项
+                        this.checkArr.splice(pos, 1)
+                    } else {
+                        // 如果不存在则添加
+                        this.checkArr.push(element.id)
+                    }
+                })
+            },
+            deleteAll() {
+                console.log('删除全部');
+                confirm('确定要移除所有商品吗?') ? this.cartData = [] : console.log('123');
+            }
+
+        },
+        //计算属性
+        computed: {
+            total() {
+                // 声明总价的变量
+                let num = 0;
+
+                this.cartData.forEach(element => {
+                    // 遍历查找当前商品 id 是否存在于 checkedArr 如果存在说明被选中
+                    let pos = this.checkArr.indexOf(element.id)
+                    if (pos > -1) {
+                        // 计算每件商品的小计 然后相加
+                        num += element.num * element.price
+                    }
+                })
+                return num;
+            }
+        },
+        //侦听器
+        watch: {
+            // 监听每条商品数据的选中状态
+            checkArr: function () {
+                if (this.checkArr.length == this.cartData.length) {
+                    // checkArr 里面每有一个值就说明被选中一条数据
+                    this.checked = true
+                } else {
+                    // 不全选 
+                    this.checked = false
+                }
+            }
+        },
+        //过滤器
+        filters: {},
+        //以下是生命周期
+        //组件创建之前
+        beforeCreate() { },
+        //组件创建之后
+        created() { },
+        //页面渲染之前
+        beforeMount() { },
+        //页面渲染之后
+        mounted() { },
+        //页面视图数据更新之前
+        beforeUpdate() { },
+        //页面视图数据更新之后
+        updated() { },
+        //页面销毁之前
+        beforeDestroy() { },
+        //页面销毁之后
+        destroyed() { },
+
+    })
+
+</script>
