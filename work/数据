@@ -1,0 +1,206 @@
+INSERT INTO goodsList VALUES ('1', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('2', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('3', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('4', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('5', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('6', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('7', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('8', 'Kid Cars', '888', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'product-item-black-10.jpg');
+INSERT INTO goodsList VALUES ('9', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('10', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('11', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('12', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('13', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('14', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('15', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('16', 'Kid Cars', '88', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'./assets/images/product-item-black-10.jpg');
+INSERT INTO goodsList VALUES ('17', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('18', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('19', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('20', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('21', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('22', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('23', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('24', 'Kid Cars', '888', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'./assets/images/product-item-black-10.jpg');
+INSERT INTO goodsList VALUES ('25', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('26', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('27', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('28', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('29', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('30', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('31', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('32', 'Kid Cars', '88', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'./assets/images/product-item-black-10.jpg');
+INSERT INTO goodsList VALUES ('33', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('34', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('35', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('36', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('37', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('38', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('39', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('40', 'Kid Cars', '888', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'./assets/product-item-black-10.jpg');
+INSERT INTO goodsList VALUES ('41', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('42', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('43', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('44', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('45', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('46', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('47', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('48', 'Kid Cars', '88', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'./assets/images/product-item-black-10.jpg');
+INSERT INTO goodsList VALUES ('49', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('50', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('51', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('52', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('53', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('54', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('55', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('56', 'Kid Cars', '888', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'./assets/images/product-item-black-10.jpg');
+INSERT INTO goodsList VALUES ('57', 'Hello Boy Shirt', '45', '描述', '35-45', '1', '2017-01-05 00:28:29', '20', '1',
+'./assets/images/cart-item-1.jpg');
+INSERT INTO goodsList VALUES ('58', 'Zoo Boy Clothes', '45', '描述', '30-50', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-5.jpg');
+INSERT INTO goodsList VALUES ('59', 'Baby Shark-Shirt', '45', '描述', '40-55', '1',
+'2017-01-05 00:28:29', '20', '1',
+'./assets/images/product-item-1.jpg');
+INSERT INTO goodsList VALUES ('60', 'Boy Blue Shose', '59', '描述123123', '40-50', '1',
+'2017-01-05 00:48:05', '22', '2',
+'./assets/images/product-item-2.jpg');
+INSERT INTO goodsList VALUES ('61', 'Cute Girl Shirt', '72', '描述123123', '35-56', '1',
+'2017-01-05 00:48:05', '44', '2',
+'./assets/images/product-item-3.jpg');
+INSERT INTO goodsList VALUES ('62', 'Kid Backpack', '66', '大长腿陪美鞋', '30-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-7.jpg');
+INSERT INTO goodsList VALUES ('63', 'Unicorn Kid Toy', '45', '妹妹的鞋子', '20-35', '1', '2019-10-13
+22:32:23', '22', '1', './assets/images/product-item-black-4.jpg');
+INSERT INTO goodsList VALUES ('64', 'Kid Cars', '88', '幸运之鞋', '66', '1', '2019-10-15 10:28:26', '1', '1',
+'./assets/images/product-item-black-10.jpg');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE goodsList (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`goodsName` varchar(200) DEFAULT NULL COMMENT '商品名称',
+`price` float DEFAULT NULL COMMENT '商品折扣价',
+`goodsDesc` varchar(500) DEFAULT NULL COMMENT '商品描述',
+`size` varchar(20) DEFAULT NULL COMMENT '商品尺寸',
+`statu` int(4) DEFAULT NULL COMMENT '是否下架',
+`updateTime` datetime DEFAULT NULL COMMENT '上下架时间',
+`num` int(20) DEFAULT NULL COMMENT '商品库存',
+`brandId` int(11) DEFAULT NULL COMMENT '归属品牌',
+`goodsImg` varchar(100) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
